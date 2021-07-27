@@ -49,7 +49,7 @@ client.on("message", (message) => {
     } else
       if (message.content.startsWith(prefix+"server")) {
            var embed = new Discord.MessageEmbed()
-	      .setColor(3447003)
+	      .setColor(0x330066)
 	      .setTitle("Server Information")
 	      .setDescription(`${message.guild}'s information`)
 	      .setThumbnail(message.guild.iconURL())
