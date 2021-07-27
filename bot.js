@@ -26,6 +26,7 @@ client.on("message", (message) => {
 	
 if (message.content.startsWith("real")) {
          	message.channel.send("real");
+}
 
 });
 client.on("message", (message) => {
