@@ -20,7 +20,7 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong");
   } else
-    if (message.content.startsWith(prefix + "pees")) {
+    if (message.content.startsWith(prefix + "pee")) {
         message.channel.send("pee");
   }
 });
