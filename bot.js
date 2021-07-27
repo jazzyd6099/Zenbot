@@ -22,6 +22,11 @@ var pees = [
 	"cries then pees cutely",
 	"pees then fucking dies",
 	"falls and pees",
+	"breaks leg then pees",
+	"pees in pants cutely",
+	"yells then pees",
+	"pee",
+	"pees on the wall",
 	];
 
 client.on("ready", () => {
@@ -49,7 +54,7 @@ client.on("message", (message) => {
     message.channel.send("pong");
   } else
     if (message.content.startsWith(prefix + "pee")) {
-        message.channel.send(pees[Math.floor(Math.random() * pees.length)])
+        message.channel.send(pees[Math.floor(Math.random()*pees.length)])
     } else
 	    if (message.content.startsWith(prefix+"real")) {
 		    message.channel.send("real");
