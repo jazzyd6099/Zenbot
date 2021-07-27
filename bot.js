@@ -60,6 +60,11 @@ client.on("message", (message) => {
 	    if (message.content.startsWith(prefix+"real")) {
 		    message.channel.send("real");
 	    } else
+		    if (message.content.startsWith(prefix+"kiss")) {
+			let huggeduser = message.mentions.users.first();
+		if(message.mentions.users.size < 1) return message.reply("you forgot to mention someone to kiss idiot");
+			     message.reply( "kissed " + huggeduser);
+	    } else
 		    if (message.content.startsWith(prefix+"help")) {
 			    var embed = new Discord.MessageEmbed()
 			    .setColor(0x330066)
