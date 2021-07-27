@@ -42,7 +42,7 @@ client.on("message", (message) => {
 			    .setColor(0x330066)
 			    .setTitle("My Commands")
 			    .setDescription("pees")
-			    .addField('`$real`, `$help`, `$pee`, `serverinfo`, `userinfo`')
+			    .addField('Commands','`$real`, `$help`, `$pee`, `serverinfo`, `userinfo`')
 			    .setFooter('Bot coded and created by SpaceCaramel#6433.')
 			    message.channel.send({embed})
     } else
