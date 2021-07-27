@@ -25,7 +25,7 @@ client.user.setPresence({ activity: { name: activity.text, type: activity.type }
 client.on("message", (message) => {
 	
 if (message.content.startsWith("real")) {
-         	message.channel.send("real");
+         	message.reply("real");
 }
 
 });
