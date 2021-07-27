@@ -34,6 +34,9 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "pee")) {
         message.channel.send("pee");
     } else
+	    if (message.content.startsWith(prefix+"real")) {
+		    message.channel.send("real");
+    } else
       if (message.content.startsWith(prefix+"server")) {
            var embed = new Discord.MessageEmbed()
 	      .setColor(0x330066)
