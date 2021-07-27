@@ -37,7 +37,7 @@ client.on("message", (message) => {
 	    if (message.content.startsWith(prefix+"real")) {
 		    message.channel.send("real");
     } else
-      if (message.content.startsWith(prefix+"server")) {
+      if (message.content.startsWith(prefix+"serverinfo")) {
            var embed = new Discord.MessageEmbed()
 	      .setColor(0x330066)
 	      .setTitle("Server Information")
@@ -51,6 +51,19 @@ client.on("message", (message) => {
   	      .addField("You Joined At", `${message.member.joinedAt.toDateString()}`)
   	      .setFooter(`Server created at ${message.guild.createdAt.toDateString()}`);
 				 message.channel.send({embed})
+      } else
+	      if (message.content.startsWith(prefix+"userinfo")) {
+		      const member = message.guild.member(user);
+				  var embed = new Discord.MessageEmbed()
+				  .setColor(3447003)
+				  .setDescription(`${user}`)
+				  .setAuthor(`${user.username}#${user.discriminator}`, user.displayAvatarURL())
+				  .addField("ID", `${user.id}`)
+				  .addField("Status", `${user.presence.status}`)
+				  .addField("In Server", `${message.guild.name}`)
+				  .addField("Joined Discord", `${user.createdAt.toDateString()}`)
+				  .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
+				  message.channel.send({embed})
   }
 });
 
