@@ -22,7 +22,12 @@ client.user.setPresence({ activity: { name: activity.text, type: activity.type }
   .catch(console.error);
   
 });
+client.on("message", (message) => {
+	
+if (message.content.startsWith("real")) {
+         	message.channel.send("real");
 
+});
 client.on("message", (message) => {
   
   if (!message.content.startsWith(prefix)) return;
