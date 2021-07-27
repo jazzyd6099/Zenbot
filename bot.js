@@ -66,7 +66,7 @@ client.on("message", (message) => {
 			    var embed = new Discord.MessageEmbed()
 			    .setColor(0x330066)
 			    .setTitle("Kiss Kiss")
-			    .setDescription(`${message.author.username} has kissed ${message.mentions.users.first().username}`)
+			    .setDescription(`${message.author.nickname} has kissed ${message.mentions.users.first().nickname}`)
 			    message.channel.send({embed})
 	    } else
 		    if (message.content.startsWith(prefix+"help")) {
