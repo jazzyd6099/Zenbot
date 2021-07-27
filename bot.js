@@ -38,7 +38,7 @@ client.on("message", (message) => {
     message.channel.send("pong");
   } else
     if (message.content.startsWith(prefix + "pee")) {
-        message.channel.send("pee");
+        message.channel.send("pees");
     } else
 	    if (message.content.startsWith(prefix+"real")) {
 		    message.channel.send("real");
