@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "$";
+const activities = require('./jsons/activity');
 
 //embedColors
 
@@ -29,9 +30,9 @@ var output = x[Math.floor(Math.random()*x.length)];
 client.on("ready", () => {
   console.log("pees");
   
-  client.user.setActivity("Thinking about Lux"); 
-       client.user.setPresence({ activity: { name: 'Thinking about Lux' }, status: 'idle' })
-  .then(console.log)
+const activity = activities[Math.floor(Math.random() * activities.length)];
+client.user.setPresence({ activity: { name: activity.text, type: activity.type }, status: 'idle' })
+	   .then(console.log)
   .catch(console.error);
   
 });
