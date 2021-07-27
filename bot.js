@@ -36,6 +36,15 @@ client.on("message", (message) => {
     } else
 	    if (message.content.startsWith(prefix+"real")) {
 		    message.channel.send("real");
+	    } else
+		    if (message.content.startsWith(prefix+"help")) {
+			    var embed = new Discord.MessageEmbed()
+			    .setColor(0x330066)
+			    .setTitle("My Commands")
+			    .setDescription("pees")
+			    .addField('`$real`, `$help`, `$pee`, `serverinfo`, `userinfo`')
+			    .setFooter('Bot coded and created by SpaceCaramel#6433.')
+			    message.channel.send({embed})
     } else
       if (message.content.startsWith(prefix+"serverinfo")) {
            var embed = new Discord.MessageEmbed()
@@ -53,6 +62,7 @@ client.on("message", (message) => {
 				 message.channel.send({embed})
       } else
 	      if (message.content.startsWith(prefix+"userinfo")) {
+		       let user = message.mentions.users.first() || message.author;
 		      const member = message.guild.member(user);
 				  var embed = new Discord.MessageEmbed()
 				  .setColor(0x330066)
