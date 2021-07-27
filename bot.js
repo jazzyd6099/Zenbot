@@ -63,7 +63,11 @@ client.on("message", (message) => {
 		    if (message.content.startsWith(prefix+"kiss")) {
 			let huggeduser = message.mentions.users.first();
 		if(message.mentions.users.size < 1) return message.reply("you forgot to mention someone to kiss idiot");
-			     message.reply( "kissed " + huggeduser);
+			    var embed = new Discord.MessageEmbad()
+			    .setColor(0x330066)
+			    .setTitle("Kiss Kiss")
+			    .setDescription(`${message.author.username} has kissed ${message.mentions.users.first().username}`)
+			    message.channel.send({embed})
 	    } else
 		    if (message.content.startsWith(prefix+"help")) {
 			    var embed = new Discord.MessageEmbed()
