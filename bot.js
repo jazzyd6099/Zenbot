@@ -27,6 +27,7 @@ var pees = [
 	"yells then pees",
 	"pee",
 	"pees on the wall",
+	"giggles then pees",
 	];
 
 client.on("ready", () => {
