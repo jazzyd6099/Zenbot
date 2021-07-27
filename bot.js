@@ -55,7 +55,7 @@ client.on("message", (message) => {
 	      if (message.content.startsWith(prefix+"userinfo")) {
 		      const member = message.guild.member(user);
 				  var embed = new Discord.MessageEmbed()
-				  .setColor(3447003)
+				  .setColor(0x330066)
 				  .setDescription(`${user}`)
 				  .setAuthor(`${user.username}#${user.discriminator}`, user.displayAvatarURL())
 				  .addField("ID", `${user.id}`)
